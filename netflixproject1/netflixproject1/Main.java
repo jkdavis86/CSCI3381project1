@@ -26,7 +26,7 @@ public class Main {
 		
 		csci3381.addShowInWeek(new ShowInWeek("2022-09-04","Films (English)", "2", "Love in the Villa", "N/A", "41220000", "1"));
 		csci3381.addShowInWeek(new ShowInWeek("2022-08-28","Films (English)", "10", "The Great Wall", "N/A", "10090000", "1"));
-		csci3381.addShowInWeek(new ShowInWeek("2022-09-04","Films (English)", "2", "Love in the Villa", "N/A", "41220000", "1"));
+		csci3381.addShowInWeek(new ShowInWeek("2022-09-04","Films (English)", "2", "Hate in the Villa", "N/A", "41220000", "1"));
 		
 
 		System.out.println("printing entire collection");

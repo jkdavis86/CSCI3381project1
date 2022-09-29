@@ -72,7 +72,10 @@ public class Collection {
 	
 	//Randomly suggest a show to watch:
 	public String randomShow () {
-		
-		return allShowsInWeeks.get(rand.nextInt(allShowsInWeeks.size())).getShowTitle();
+		String rs = allShowsInWeeks.get(rand.nextInt(allShowsInWeeks.size())).getShowTitle();
+		if (rs.charAt(0) != '*')
+			return rs;
+		else
+			return randomShow();
 	}
 }
