@@ -47,7 +47,10 @@ public class Main {
 		System.out.println(csci3381);
 		System.out.println();
 		
-		
+
+		System.out.println("printing random show:");
+		System.out.println(csci3381.randomShow());
+		System.out.println();
 
 	}
 }

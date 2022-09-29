@@ -1,11 +1,13 @@
 package netflixproject1;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Collection {
 
 	private ArrayList<ShowInWeek> allShowsInWeeks;
 	private String collectionName;
+	Random rand = new Random();
 	
 	//Default Constructor:
 	public Collection () {
@@ -60,13 +62,17 @@ public class Collection {
 	public void unpurgeShow (String st) {
 		
 		String purgedShowTitle = "*" + st;
-		System.out.println("PST = " + purgedShowTitle);
 		
 		for (ShowInWeek s : allShowsInWeeks) {
 			if (s.getShowTitle().equals(purgedShowTitle)) {
-				System.out.println("About to unpurge " + st);
 				s.setShowTitle(st);
 			}
 		}
+	}
+	
+	//Randomly suggest a show to watch:
+	public String randomShow () {
+		
+		return allShowsInWeeks.get(rand.nextInt(allShowsInWeeks.size())).getShowTitle();
 	}
 }
