@@ -7,11 +7,19 @@ public class Collection {
 	private ArrayList<ShowInWeek> allShowsInWeeks;
 	private String collectionName;
 	
+	//Default Constructor:
+	public Collection () {
+		collectionName = "";
+		allShowsInWeeks = new ArrayList<ShowInWeek>();
+	}
+	
+	//Constructor:
 	public Collection (String cn) {
 		collectionName = cn;
 		allShowsInWeeks = new ArrayList<ShowInWeek>();
 	}
 
+	//Displays all of collection as a string:
 	public String toString () {
 		String toReturn = collectionName + ":\n";
 		for (ShowInWeek s : allShowsInWeeks) {
@@ -20,6 +28,7 @@ public class Collection {
 		return toReturn;
 	}	
 	
+	//Returns a string of shows in a specific week:
 	public String getWeek (String week) {
 		
 		String toReturn = "";
@@ -32,24 +41,31 @@ public class Collection {
 		return toReturn;
 	}
 	
+	//Adds show in week to collection:
 	public void addShowInWeek (ShowInWeek s) {
 		allShowsInWeeks.add(s);
 	}
 	
+	//Makes a show unavailable when suggestions are made:
 	public void purgeShow (String showTitle) {
 		
 		for (ShowInWeek s : allShowsInWeeks) {
-			if (s.getShowTitle() == showTitle) {
+			if (s.getShowTitle().equals(showTitle)) {
 				s.setShowTitle("*" + s.getShowTitle());
 			}
 		}
 	}
 	
-public void unpurgeShow (String showTitle) {
+	//Makes a purged show available again:
+	public void unpurgeShow (String st) {
+		
+		String purgedShowTitle = "*" + st;
+		System.out.println("PST = " + purgedShowTitle);
 		
 		for (ShowInWeek s : allShowsInWeeks) {
-			if (s.getShowTitle() == "*" + showTitle) {
-				s.setShowTitle(showTitle);
+			if (s.getShowTitle().equals(purgedShowTitle)) {
+				System.out.println("About to unpurge " + st);
+				s.setShowTitle(st);
 			}
 		}
 	}

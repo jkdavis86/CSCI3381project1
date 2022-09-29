@@ -26,7 +26,7 @@ public class Main {
 		
 		csci3381.addShowInWeek(new ShowInWeek("2022-09-04","Films (English)", "2", "Love in the Villa", "N/A", "41220000", "1"));
 		csci3381.addShowInWeek(new ShowInWeek("2022-08-28","Films (English)", "10", "The Great Wall", "N/A", "10090000", "1"));
-		csci3381.addShowInWeek(new ShowInWeek("2022-09-04","Films (English)", "2", "Hate in the Villa", "N/A", "41220000", "1"));
+		csci3381.addShowInWeek(new ShowInWeek("2022-09-04","Films (English)", "2", "Love in the Villa", "N/A", "41220000", "1"));
 		
 
 		System.out.println("printing entire collection");
@@ -37,15 +37,16 @@ public class Main {
 		System.out.println(csci3381.getWeek("2022-09-04"));
 		System.out.println();
 		
-		csci3381.purgeShow("Me Time");
+		csci3381.purgeShow("Love in the Villa");
 		System.out.println("printing purged:");
 		System.out.println(csci3381);
 		System.out.println();
 		
-		csci3381.unpurgeShow("Me Time");
+		csci3381.unpurgeShow("Love in the Villa");
 		System.out.println("printing unpurged:");
 		System.out.println(csci3381);
 		System.out.println();
+		
 		
 
 	}
