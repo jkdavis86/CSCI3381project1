@@ -78,4 +78,20 @@ public class Collection {
 		else
 			return randomShow();
 	}
+	
+	//Suggest a show based on another show:
+	public String predictShow(ShowInWeek s) {
+		for (ShowInWeek x : allShowsInWeeks) {
+			if (x.getCategory() == s.getCategory() && x != s 
+					&& x.getShowTitle().charAt(0) != '*') {
+				return x.getShowTitle();
+			}
+		}
+		return predictShow(s);
+	}
+	
+	//Suggest a show based on a collection of shows:
+		public String predictShow(Collection c) {
+			return c.randomShow();
+		}
 }

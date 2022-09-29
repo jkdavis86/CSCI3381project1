@@ -52,5 +52,12 @@ public class Main {
 		System.out.println(csci3381.randomShow());
 		System.out.println();
 
+		System.out.println("printing single show-predicted show:");
+		System.out.println(csci3381.predictShow(aShow));
+		System.out.println();
+		
+		System.out.println("printing collection-predicted show:");
+		System.out.println(csci3381.predictShow(csci3381));
+		System.out.println();
 	}
 }
