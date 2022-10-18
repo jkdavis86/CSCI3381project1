@@ -13,7 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Collection csci3381 = new Collection("Test Collection");
+		Collection csci3381 = new Collection("Test Collection", null);
 		
 		ShowInWeek aShow = new ShowInWeek("2022-09-04","Films (English)", "1", "Me Time", "N/A", "56560000", "2");
 		System.out.println("printing a single show");
